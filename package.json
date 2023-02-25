@@ -1,0 +1,32 @@
+{
+  "name": "rock-paper-scissors-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "compile:sass": "sass ./app/src/scss/main.scss ./app/public/dist/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akrambzgh/Rock-Paper-Scissors-Game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akrambzgh/Rock-Paper-Scissors-Game/issues"
+  },
+  "homepage": "https://github.com/akrambzgh/Rock-Paper-Scissors-Game#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "cssnano": "^5.1.15",
+    "gulp-sass": "^5.1.0"
+  },
+  "dependencies": {
+    "dart-sass": "^1.25.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "postcss": "^8.4.21",
+    "sass": "^1.58.3"
+  }
+}

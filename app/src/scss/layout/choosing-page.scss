@@ -1,0 +1,19 @@
+@use "../abstracts/fun.scss" as *;
+@use "../abstracts/mixin.scss" as *;
+@use "../utils/vars.scss" as *;
+
+body {
+  background: linear-gradient($RadialGradientTop, $RadialGradientBottom);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  @include flex(flex-start, center, column);
+}
+.score-section {
+  @include flex(space-between, center, row);
+  width: 700px;
+  height: 150px;
+  border: 2px solid $HeaderOutline;
+  border-radius: 15px;
+  padding: 0 15px;
+}
