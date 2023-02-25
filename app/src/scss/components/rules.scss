@@ -1,0 +1,40 @@
+@use "../abstracts/fun.scss" as *;
+@use "../abstracts/mixin.scss" as *;
+@use "../utils/vars.scss" as *;
+
+.rules-section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  padding: 15px 35px;
+  border-radius: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+  z-index: 15;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .head {
+    @include flex(space-between, center, row);
+    margin-bottom: 20px;
+  }
+}
+
+.rules-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  button {
+    border: 1px solid $white;
+    padding: 10px 25px;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    font-size: 20px;
+    font-weight: 700;
+    color: $white;
+  }
+}

@@ -22,11 +22,7 @@
     <link rel="stylesheet" href="./dist/main.css" />
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-    <!-- 
-  Score
-  Rules
-
-  You Picked
+    <!-- You Picked
   The House Picked
 
   You Win
@@ -48,12 +44,57 @@
         </div>
       </div>
       <div class="rock-paper-scissors">
-        <div class="item"><img src="../../images/icon-paper.svg" alt="" /></div>
-        <div class="item">
+        <div class="item paper">
+          <img src="../../images/icon-paper.svg" alt="" />
+        </div>
+        <div class="item scissors">
           <img src="../../images/icon-scissors.svg" alt="" />
         </div>
-        <div class="item"><img src="../../images/icon-rock.svg" alt="" /></div>
+        <div class="item rock">
+          <img src="../../images/icon-rock.svg" alt="" />
+        </div>
+        <div class="line one"></div>
+        <div class="line two"></div>
+        <div class="line three"></div>
+      </div>
+      <div class="rules-btn">
+        <button>RULES</button>
+      </div>
+      <div class="rules-section">
+        <div class="head">
+          <h1>RULES</h1>
+          <button><img src="../../images/icon-close.svg" alt="" /></button>
+        </div>
+        <div class="rules-img">
+          <img src="../../images/image-rules.svg" alt="" />
+        </div>
       </div>
     </main>
+    <div class="overlayer"></div>
   </body>
 </html>
+<!--  .wave {
+position: absolute;
+width: 170%;
+height: 170%;
+border-radius: 50%;
+background: blue;
+&.one {
+width: 170%;
+height: 170%;
+background: blue;
+z-index: -2;
+}
+&.two {
+width: 200%;
+height: 200%;
+background: purple;
+z-index: -3;
+}
+&.three {
+width: 230%;
+height: 230%;
+background: yellow;
+z-index: -4;
+}
+}-->

@@ -19,3 +19,19 @@ body {
   margin: 0;
   font-family: font.$font-family;
 }
+
+.overlayer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: 300ms;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
