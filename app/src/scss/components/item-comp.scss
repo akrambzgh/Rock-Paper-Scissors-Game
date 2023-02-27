@@ -15,31 +15,6 @@
     width: 90px;
     height: 100px;
   }
-  .wave {
-    position: absolute;
-    width: 170%;
-    height: 170%;
-    border-radius: 50%;
-    background: blue;
-    &.one {
-      width: 170%;
-      height: 170%;
-      background: blue;
-      z-index: -2;
-    }
-    &.two {
-      width: 200%;
-      height: 200%;
-      background: purple;
-      z-index: -3;
-    }
-    &.three {
-      width: 230%;
-      height: 230%;
-      background: yellow;
-      z-index: -4;
-    }
-  }
   &::before {
     content: "";
     position: absolute;

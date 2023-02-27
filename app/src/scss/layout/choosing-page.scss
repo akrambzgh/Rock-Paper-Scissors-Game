@@ -10,79 +10,79 @@ body {
   @include flex(flex-start, center, column);
   padding-top: 20px;
 }
-main {
-  .score-section {
-    @include flex(space-between, center, row);
-    width: 1000px;
-    height: 150px;
-    border: 2px solid $HeaderOutline;
-    border-radius: 15px;
-    padding: 10px 25px;
-    user-select: none;
-    .item-list {
-      h2 {
-        line-height: 1;
-        font-size: 35px;
-        color: $white;
-        letter-spacing: 1px;
-      }
-    }
-    .score {
-      background-color: $white;
-      padding: 5px 50px;
-      border-radius: 15px;
-      text-align: center;
-      h1 {
-        font-size: 50px;
-        color: $DarkText;
-      }
-      span {
-        font-size: 18px;
-        font-weight: 700;
-        letter-spacing: 3px;
-        color: $ScoreText;
-      }
+.score-section {
+  @include flex(space-between, center, row);
+  width: 1000px;
+  height: 150px;
+  border: 2px solid $HeaderOutline;
+  border-radius: 15px;
+  padding: 10px 25px;
+  user-select: none;
+  .item-list {
+    h2 {
+      line-height: 1;
+      font-size: 35px;
+      color: $white;
+      letter-spacing: 1px;
     }
   }
-  .rock-paper-scissors {
-    position: relative;
-    width: 1000px;
-    height: 565px;
-    .item {
-      position: absolute;
-      &.paper {
-        top: 7%;
-        left: 22%;
-      }
-      &.scissors {
-        top: 7%;
-        right: 22%;
-      }
-      &.rock {
-        top: 58%;
-        left: calc(61% - 210px);
-      }
+  .score {
+    background-color: $white;
+    padding: 5px 50px;
+    border-radius: 15px;
+    text-align: center;
+    h1 {
+      font-size: 50px;
+      color: $DarkText;
     }
-    .line {
-      position: absolute;
-      width: 250px;
-      height: 15px;
-      background-color: hsl(237, 49%, 15%);
-      z-index: -2;
-      &.one {
-        top: 25%;
-        left: 38%;
-      }
-      &.two {
-        top: 58%;
-        left: 30%;
-        rotate: 65deg;
-      }
-      &.three {
-        top: 58%;
-        right: 30%;
-        rotate: -65deg;
-      }
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: $ScoreText;
+    }
+  }
+}
+.rock-paper-scissors {
+  display: none;
+
+  position: relative;
+  width: 1000px;
+  height: 565px;
+  .item {
+    position: absolute;
+    &.paper {
+      top: 7%;
+      left: 22%;
+    }
+    &.scissors {
+      top: 7%;
+      right: 22%;
+    }
+    &.rock {
+      top: 58%;
+      left: calc(61% - 210px);
+    }
+  }
+  .line {
+    position: absolute;
+    width: 250px;
+    height: 15px;
+    background-color: hsl(237, 49%, 15%);
+    z-index: -2;
+    &.one {
+      top: 25%;
+      left: 38%;
+    }
+    &.two {
+      top: 58%;
+      left: 30%;
+      rotate: 65deg;
+    }
+    &.three {
+      top: 58%;
+      right: 30%;
+      rotate: -65deg;
     }
   }
 }
