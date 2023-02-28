@@ -11,10 +11,19 @@
   border-radius: 50%;
   cursor: pointer;
   user-select: none;
+  @include smallScreen() {
+    width: 130px;
+    height: 130px;
+  }
   img {
     width: 90px;
     height: 100px;
+    @include smallScreen() {
+      width: 80px;
+      height: 90px;
+    }
   }
+
   &::before {
     content: "";
     position: absolute;

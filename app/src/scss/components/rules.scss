@@ -14,6 +14,11 @@
   visibility: hidden;
   transition: 300ms;
   z-index: 15;
+  @include smallScreen() {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
   &.show {
     opacity: 1;
     visibility: visible;
@@ -21,6 +26,14 @@
   .head {
     @include flex(space-between, center, row);
     margin-bottom: 20px;
+  }
+  .rules-img {
+    @include smallScreen() {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 }
 

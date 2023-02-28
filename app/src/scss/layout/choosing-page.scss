@@ -7,13 +7,28 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  @include flex(flex-start, center, column);
   padding-top: 20px;
+  overflow: hidden;
+}
+main {
+  width: 100vw;
+  @include flex(flex-start, center, column);
+  height: 100vh;
+  overflow: hidden;
 }
 .score-section {
   @include flex(space-between, center, row);
   width: 1000px;
   height: 150px;
+  @include smallScreen() {
+    width: 100%;
+  }
+  @media (min-width: 767.2px) {
+    width: 100%;
+  }
+  @media (max-width: 991px) and (min-width: 768px) {
+    width: 90%;
+  }
   border: 2px solid $HeaderOutline;
   border-radius: 15px;
   padding: 10px 25px;
@@ -31,6 +46,9 @@ body {
     padding: 5px 50px;
     border-radius: 15px;
     text-align: center;
+    @include smallScreen() {
+      padding: 5px 20px;
+    }
     h1 {
       font-size: 50px;
       color: $DarkText;
@@ -44,45 +62,89 @@ body {
   }
 }
 .rock-paper-scissors {
-  display: none;
-
   position: relative;
   width: 1000px;
+  // display: none;
   height: 565px;
+  @include smallScreen() {
+    width: 100%;
+  }
+  @media (max-width: 991px) and (min-width: 768px) {
+    width: 85%;
+  }
   .item {
     position: absolute;
+
     &.paper {
       top: 7%;
       left: 22%;
+      @include smallScreen() {
+        top: 25%;
+        left: 5%;
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        left: 3%;
+      }
     }
     &.scissors {
       top: 7%;
       right: 22%;
+      @include smallScreen() {
+        top: 25%;
+        right: 7%;
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        right: 3%;
+      }
     }
     &.rock {
       top: 58%;
       left: calc(61% - 210px);
+      @include smallScreen() {
+        top: 60%;
+        left: calc(83% - 210px);
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        left: 35%;
+      }
     }
   }
   .line {
     position: absolute;
-    width: 250px;
+    width: 200px;
     height: 15px;
     background-color: hsl(237, 49%, 15%);
     z-index: -2;
     &.one {
       top: 25%;
       left: 38%;
+      @include smallScreen() {
+        top: 35%;
+      }
     }
     &.two {
       top: 58%;
       left: 30%;
       rotate: 65deg;
+      @include smallScreen() {
+        top: 50%;
+        left: 0;
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        left: 20%;
+      }
     }
     &.three {
       top: 58%;
       right: 30%;
       rotate: -65deg;
+      @include smallScreen() {
+        top: 50%;
+        right: 0;
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        right: 20%;
+      }
     }
   }
 }
