@@ -23,7 +23,7 @@ main {
   @include smallScreen() {
     width: 100%;
   }
-  @media (min-width: 767.2px) {
+  @media (width: 767.2px) {
     width: 100%;
   }
   @media (max-width: 991px) and (min-width: 768px) {

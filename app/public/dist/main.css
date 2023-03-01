@@ -101,7 +101,7 @@ main {
     width: 100%;
   }
 }
-@media (min-width: 767.2px) {
+@media (width: 767.2px) {
   .score-section {
     width: 100%;
   }
