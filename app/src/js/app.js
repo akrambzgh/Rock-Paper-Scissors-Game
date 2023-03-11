@@ -38,6 +38,7 @@ allItems.forEach((item) => {
     // Random House Choosing
     let itemsArray = ["rock", "paper", "scissors"];
     let randomItem = itemsArray[Math.floor(Math.random() * itemsArray.length)];
+
     // Player/House Box
     let houseItemStructer = `<div class="item ${randomItem}">
             <img src="../../images/icon-${randomItem}.svg" alt="" />
@@ -51,13 +52,14 @@ allItems.forEach((item) => {
             <div class="wave two"></div>
             <div class="wave three"></div>
           </div>`;
-    houseBox.innerHTML += houseItemStructer;
     playerBox.innerHTML += playerItemStucter;
+    houseBox.innerHTML += houseItemStructer;
 
     // Player Item Class
     let choosedPlayerItem = document.querySelector(".player .item");
     choosedPlayerItem.classList[2] = itemChoosed;
     let choosedHouseItem = document.querySelector(".house .item");
+
     // Win And Lose States
     if (choosedPlayerItem.classList[1] == choosedHouseItem.classList[1]) {
       winOrLoseText.textContent = "TIE";
