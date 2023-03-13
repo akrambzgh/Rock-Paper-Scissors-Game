@@ -65,4 +65,16 @@
       box-shadow: 11px 4px hsl(40deg 100% 37%);
     }
   }
+  &.lizard {
+    &::before {
+      background: linear-gradient($LizardGradientTop, $LizardGradientBottom);
+      box-shadow: 11px 4px hsl(261, 100%, 40%);
+    }
+  }
+  &.spock {
+    &::before {
+      background: linear-gradient($CyanTop, $CyanBottom);
+      box-shadow: 11px 4px hsl(189, 98%, 40%);
+    }
+  }
 }

@@ -19,7 +19,8 @@ main {
 .score-section {
   @include flex(space-between, center, row);
   width: 1000px;
-  height: 150px;
+  // height: 150px;
+  padding: 15px;
   @include smallScreen() {
     width: 100%;
   }
@@ -61,7 +62,7 @@ main {
     }
   }
 }
-.rock-paper-scissors {
+.choosing-part {
   position: relative;
   width: 1000px;
   // display: none;
@@ -72,78 +73,203 @@ main {
   @media (max-width: 991px) and (min-width: 768px) {
     width: 85%;
   }
-  .item {
-    position: absolute;
 
-    &.paper {
-      top: 7%;
-      left: 22%;
-      @include smallScreen() {
-        top: 25%;
-        left: 5%;
+  &.rock-paper-scissors {
+    .item {
+      position: absolute;
+
+      &.paper {
+        top: 7%;
+        left: 22%;
+        @include smallScreen() {
+          top: 25%;
+          left: 5%;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: 3%;
+        }
       }
-      @media (max-width: 991px) and (min-width: 768px) {
-        left: 3%;
+      &.scissors {
+        top: 7%;
+        right: 22%;
+        @include smallScreen() {
+          top: 25%;
+          right: 7%;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 3%;
+        }
+      }
+      &.rock {
+        top: 58%;
+        left: calc(61% - 210px);
+        @include smallScreen() {
+          top: 60%;
+          left: calc(83% - 210px);
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: 35%;
+        }
       }
     }
-    &.scissors {
-      top: 7%;
-      right: 22%;
-      @include smallScreen() {
+    .line {
+      position: absolute;
+      width: 200px;
+      height: 15px;
+      background-color: hsl(237, 49%, 15%);
+      z-index: -2;
+      &.one {
         top: 25%;
-        right: 7%;
+        left: 38%;
+        @include smallScreen() {
+          top: 35%;
+        }
       }
-      @media (max-width: 991px) and (min-width: 768px) {
-        right: 3%;
+      &.two {
+        top: 58%;
+        left: 30%;
+        rotate: 65deg;
+        @include smallScreen() {
+          top: 50%;
+          left: 0;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: 20%;
+        }
       }
-    }
-    &.rock {
-      top: 58%;
-      left: calc(61% - 210px);
-      @include smallScreen() {
-        top: 60%;
-        left: calc(83% - 210px);
-      }
-      @media (max-width: 991px) and (min-width: 768px) {
-        left: 35%;
+      &.three {
+        top: 58%;
+        right: 30%;
+        rotate: -65deg;
+        @include smallScreen() {
+          top: 50%;
+          right: 0;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 20%;
+        }
       }
     }
   }
-  .line {
-    position: absolute;
-    width: 200px;
-    height: 15px;
-    background-color: hsl(237, 49%, 15%);
-    z-index: -2;
-    &.one {
-      top: 25%;
-      left: 38%;
-      @include smallScreen() {
-        top: 35%;
+  &.rock-paper-scissors-lizard-spock {
+    .item {
+      position: absolute;
+      &.paper {
+        top: 42%;
+        left: 12%;
+        @include smallScreen() {
+          top: 25%;
+          left: 5%;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: 3%;
+        }
+      }
+      &.scissors {
+        top: 42%;
+        right: 12%;
+        @include smallScreen() {
+          top: 25%;
+          right: 7%;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 3%;
+        }
+      }
+      &.lizard {
+        top: 91%;
+        left: 23%;
+        @include smallScreen() {
+          top: 25%;
+          right: 7%;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 3%;
+        }
+      }
+      &.spock {
+        top: 91%;
+        right: 23%;
+        @include smallScreen() {
+          top: 25%;
+          right: 7%;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 3%;
+        }
+      }
+      &.rock {
+        top: 7%;
+        left: calc(61% - 210px);
+        @include smallScreen() {
+          top: 60%;
+          left: calc(83% - 210px);
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: 35%;
+        }
       }
     }
-    &.two {
-      top: 58%;
-      left: 30%;
-      rotate: 65deg;
-      @include smallScreen() {
-        top: 50%;
-        left: 0;
+    .line {
+      position: absolute;
+      width: 200px;
+      height: 15px;
+      background-color: hsl(237, 49%, 15%);
+      z-index: -2;
+      &.one {
+        top: 42%;
+        left: 25%;
+        rotate: -40deg;
+        @include smallScreen() {
+          top: 35%;
+        }
       }
-      @media (max-width: 991px) and (min-width: 768px) {
-        left: 20%;
+      &.two {
+        top: 42%;
+        right: 25%;
+        rotate: 40deg;
+        @include smallScreen() {
+          top: 50%;
+          left: 0;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          left: 20%;
+        }
       }
-    }
-    &.three {
-      top: 58%;
-      right: 30%;
-      rotate: -65deg;
-      @include smallScreen() {
-        top: 50%;
-        right: 0;
+      &.three {
+        top: 80%;
+        right: 16%;
+        rotate: -65deg;
+        @include smallScreen() {
+          top: 50%;
+          right: 0;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 20%;
+        }
       }
-      @media (max-width: 991px) and (min-width: 768px) {
-        right: 20%;
+      &.four {
+        top: 80%;
+        left: 16%;
+        rotate: 65deg;
+        @include smallScreen() {
+          top: 50%;
+          right: 0;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 20%;
+        }
+      }
+      &.five {
+        top: 110%;
+        left: 45%;
+        @include smallScreen() {
+          top: 50%;
+          right: 0;
+        }
+        @media (max-width: 991px) and (min-width: 768px) {
+          right: 20%;
+        }
       }
     }
   }
