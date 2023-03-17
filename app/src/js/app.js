@@ -1,5 +1,4 @@
 let mode = document.querySelector(".mode");
-console.log(mode);
 
 // Choosing Rock/Paper/Scissors Elements
 let allOriginalItems = document.querySelectorAll(
@@ -316,7 +315,6 @@ playAgainButton.addEventListener("click", () => {
   playerBox.classList.remove("win");
   houseBox.classList.remove("win");
 });
-console.log(playerBox);
 // Change The Game Type
 let switcher = document.querySelector(".switcher");
 switcher.addEventListener("click", () => {
@@ -341,7 +339,6 @@ switcher.addEventListener("click", () => {
 // Open Rules Box
 let openRuleButton = document.querySelector(".rules-btn button");
 let originalRulesBox = document.querySelector(".original-rule");
-console.log(originalRulesBox);
 let bonusRulesBox = document.querySelector(".bonus-rule");
 let overlayer = document.querySelector(".overlayer");
 
