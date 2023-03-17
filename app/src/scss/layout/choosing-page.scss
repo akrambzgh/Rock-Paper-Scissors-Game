@@ -6,9 +6,10 @@ body {
   background: linear-gradient($RadialGradientTop, $RadialGradientBottom);
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
+  // height: 100vh;
   padding-top: 20px;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 main {
   width: 100vw;
@@ -16,56 +17,10 @@ main {
   height: 100vh;
   overflow: hidden;
 }
-.score-section {
-  @include flex(space-between, center, row);
-  width: 1000px;
-  // height: 150px;
-  padding: 15px;
-  @include smallScreen() {
-    width: 100%;
-  }
-  @media (width: 767.2px) {
-    width: 100%;
-  }
-  @media (max-width: 991px) and (min-width: 768px) {
-    width: 90%;
-  }
-  border: 2px solid $HeaderOutline;
-  border-radius: 15px;
-  padding: 10px 25px;
-  user-select: none;
-  .item-list {
-    h2 {
-      line-height: 1;
-      font-size: 35px;
-      color: $white;
-      letter-spacing: 1px;
-    }
-  }
-  .score {
-    background-color: $white;
-    padding: 5px 50px;
-    border-radius: 15px;
-    text-align: center;
-    @include smallScreen() {
-      padding: 5px 20px;
-    }
-    h1 {
-      font-size: 50px;
-      color: $DarkText;
-    }
-    span {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 3px;
-      color: $ScoreText;
-    }
-  }
-}
+
 .choosing-part {
   position: relative;
   width: 1000px;
-  // display: none;
   height: 565px;
   @include smallScreen() {
     width: 100%;
@@ -75,9 +30,14 @@ main {
   }
 
   &.rock-paper-scissors {
+    transition: 600ms;
+    position: absolute;
+    top: 30%;
+    &.show {
+      transform: translateX(130%);
+    }
     .item {
       position: absolute;
-
       &.paper {
         top: 7%;
         left: 22%;
@@ -134,7 +94,8 @@ main {
           left: 0;
         }
         @media (max-width: 991px) and (min-width: 768px) {
-          left: 20%;
+          left: 50%;
+          top: 85%;
         }
       }
       &.three {
@@ -152,14 +113,20 @@ main {
     }
   }
   &.rock-paper-scissors-lizard-spock {
+    transition: 600ms;
+    position: absolute;
+    top: 22%;
+    &.show {
+      transform: translateX(-140%);
+    }
     .item {
       position: absolute;
       &.paper {
         top: 42%;
         left: 12%;
         @include smallScreen() {
-          top: 25%;
-          left: 5%;
+          top: 33%;
+          left: 63%;
         }
         @media (max-width: 991px) and (min-width: 768px) {
           left: 3%;
@@ -169,8 +136,8 @@ main {
         top: 42%;
         right: 12%;
         @include smallScreen() {
-          top: 25%;
-          right: 7%;
+          top: 7%;
+          right: 36%;
         }
         @media (max-width: 991px) and (min-width: 768px) {
           right: 3%;
@@ -180,8 +147,8 @@ main {
         top: 91%;
         left: 23%;
         @include smallScreen() {
-          top: 25%;
-          right: 7%;
+          top: 65%;
+          left: 10%;
         }
         @media (max-width: 991px) and (min-width: 768px) {
           right: 3%;
@@ -191,8 +158,8 @@ main {
         top: 91%;
         right: 23%;
         @include smallScreen() {
-          top: 25%;
-          right: 7%;
+          top: 33%;
+          left: 4%;
         }
         @media (max-width: 991px) and (min-width: 768px) {
           right: 3%;
@@ -202,8 +169,8 @@ main {
         top: 7%;
         left: calc(61% - 210px);
         @include smallScreen() {
-          top: 60%;
-          left: calc(83% - 210px);
+          top: 65%;
+          left: 60%;
         }
         @media (max-width: 991px) and (min-width: 768px) {
           left: 35%;
@@ -221,7 +188,9 @@ main {
         left: 25%;
         rotate: -40deg;
         @include smallScreen() {
-          top: 35%;
+          top: 28%;
+          rotate: -46deg;
+          left: 12%;
         }
       }
       &.two {
@@ -229,20 +198,21 @@ main {
         right: 25%;
         rotate: 40deg;
         @include smallScreen() {
-          top: 50%;
-          left: 0;
+          top: 20%;
+          left: 34%;
+          rotate: 46deg;
         }
-        @media (max-width: 991px) and (min-width: 768px) {
-          left: 20%;
-        }
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        left: 20%;
       }
       &.three {
         top: 80%;
         right: 16%;
         rotate: -65deg;
         @include smallScreen() {
-          top: 50%;
-          right: 0;
+          top: 65%;
+          right: 3%;
         }
         @media (max-width: 991px) and (min-width: 768px) {
           right: 20%;
@@ -253,8 +223,8 @@ main {
         left: 16%;
         rotate: 65deg;
         @include smallScreen() {
-          top: 50%;
-          right: 0;
+          top: 65%;
+          left: 3%;
         }
         @media (max-width: 991px) and (min-width: 768px) {
           right: 20%;
@@ -264,7 +234,7 @@ main {
         top: 110%;
         left: 45%;
         @include smallScreen() {
-          top: 50%;
+          top: 76%;
           right: 0;
         }
         @media (max-width: 991px) and (min-width: 768px) {

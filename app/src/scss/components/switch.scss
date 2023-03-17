@@ -1,7 +1,7 @@
 @use "../abstracts/fun.scss" as *;
 @use "../abstracts/mixin.scss" as *;
 @use "../utils/vars.scss" as *;
-.switch {
+.switcher {
   position: relative;
   display: inline-block;
   width: 60px;
@@ -19,6 +19,7 @@
   left: 0;
   right: 0;
   bottom: 0;
+  border-radius: 34px;
   background-color: $white;
   transition: 0.4s;
   &:before {
@@ -29,32 +30,16 @@
     left: 4px;
     bottom: 4px;
     background-color: $RadialGradientBottom;
+    border-radius: 50%;
     transition: 0.4s;
   }
 }
-input {
-  &:checked {
-    + {
-      .slider {
-        background-color: $RadialGradientBottom;
-        &:before {
-          transform: translateX(26px);
-          background-color: $white;
-        }
-      }
+.switcher.checked {
+  .slider {
+    background-color: $RadialGradientBottom;
+    &:before {
+      transform: translateX(26px);
+      background-color: $white;
     }
-  }
-  &:focus {
-    + {
-      .slider {
-        box-shadow: 0 0 1px #2196f3;
-      }
-    }
-  }
-}
-.slider.round {
-  border-radius: 34px;
-  &:before {
-    border-radius: 50%;
   }
 }

@@ -1,18 +1,5 @@
-// Open Rules Box
-let openRuleButton = document.querySelector(".rules-btn button");
-let rulesBox = document.querySelector(".rules-section");
-let overlayer = document.querySelector(".overlayer");
-openRuleButton.addEventListener("click", () => {
-  rulesBox.classList.add("show");
-  overlayer.classList.add("show");
-});
-let mode = null;
-// Closing Rules Box
-const closeButton = document.querySelector(".close");
-closeButton.addEventListener("click", () => {
-  rulesBox.classList.remove("show");
-  overlayer.classList.remove("show");
-});
+let mode = document.querySelector(".mode");
+console.log(mode);
 
 // Choosing Rock/Paper/Scissors Elements
 let allOriginalItems = document.querySelectorAll(
@@ -38,13 +25,11 @@ let winOrLoseText = document.querySelector(".win-lose-text");
 // Score Elements
 let scoreNumber = document.querySelector(".score-number");
 let scoreNumberCounter = parseInt(scoreNumber.getAttribute("data-score"));
-// Play Agian
-const playAgainButton = document.querySelector(".again-btn");
+let gameItemsList = document.querySelector(".item-list");
 
-// Main Fun
+// Original Game
 allOriginalItems.forEach((item) => {
   item.addEventListener("click", () => {
-    mode = "original";
     let itemChoosed = item.classList[2];
     originalChoosingItemSection.style.display = "none";
     // Switching to Battlefield
@@ -125,10 +110,10 @@ allOriginalItems.forEach((item) => {
     }
   });
 });
-// Main Fun
+
+// Bonus Game
 allBonusItems.forEach((item) => {
   item.addEventListener("click", () => {
-    mode = "bonus";
     let itemChoosed = item.classList[2];
     bonusChoosingItemSection.style.display = "none";
     // Switching to Battlefield
@@ -318,10 +303,11 @@ allBonusItems.forEach((item) => {
 });
 
 // Play Again
+const playAgainButton = document.querySelector(".again-btn");
 playAgainButton.addEventListener("click", () => {
-  if (mode == "original") {
+  if (mode.classList[1] == "original") {
     originalChoosingItemSection.style.display = "flex";
-  } else if (mode == "bonus") {
+  } else if (mode.classList[1] == "bonus") {
     bonusChoosingItemSection.style.display = "flex";
   }
   battleFieldSection.style.display = "none";
@@ -330,5 +316,50 @@ playAgainButton.addEventListener("click", () => {
   playerBox.classList.remove("win");
   houseBox.classList.remove("win");
 });
+console.log(playerBox);
+// Change The Game Type
+let switcher = document.querySelector(".switcher");
+switcher.addEventListener("click", () => {
+  switcher.classList.toggle("bonus");
+  switcher.classList.toggle("original");
+  switcher.classList.toggle("checked");
+  mode.classList.toggle("original");
+  mode.classList.toggle("bonus");
+  if (mode.classList[1] == "bonus") {
+    originalChoosingItemSection.classList.add("show");
+    bonusChoosingItemSection.classList.remove("show");
+    // gameItemsList.innerHTML = `<h2>ROCK</h2><h2>PAPER</h2>
+    // <h2>SCISSORS</h2><h2>LIZARD</h2><h2>SPOCK</h2>`;
+  } else if (mode.classList[1] == "original") {
+    bonusChoosingItemSection.classList.add("show");
+    originalChoosingItemSection.classList.remove("show");
+    // gameItemsList.innerHTML = `<h2>ROCK</h2><h2>PAPER</h2>
+    // <h2>SCISSORS</h2>`;
+  }
+});
 
-// Chaging Game
+// Open Rules Box
+let openRuleButton = document.querySelector(".rules-btn button");
+let originalRulesBox = document.querySelector(".original-rule");
+console.log(originalRulesBox);
+let bonusRulesBox = document.querySelector(".bonus-rule");
+let overlayer = document.querySelector(".overlayer");
+
+openRuleButton.addEventListener("click", () => {
+  if (mode.classList[1] == "original") {
+    originalRulesBox.classList.add("show");
+  } else if (mode.classList[1] == "bonus") {
+    bonusRulesBox.classList.add("show");
+  }
+  overlayer.classList.add("show");
+});
+
+// Closing Rules Box
+const closeButtons = document.querySelectorAll(".close");
+closeButtons.forEach((closeButton) => {
+  closeButton.addEventListener("click", () => {
+    originalRulesBox.classList.remove("show");
+    bonusRulesBox.classList.remove("show");
+    overlayer.classList.remove("show");
+  });
+});
