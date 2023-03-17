@@ -1,11 +1,11 @@
 @use "../abstracts/fun.scss" as *;
 @use "../abstracts/mixin.scss" as *;
-@use "../utils/vars.scss" as *;
+@use "../utils/vars.scss" as vars;
 .switcher {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: em(60);
+  height: em(34);
   input {
     opacity: 0;
     width: 0;
@@ -19,27 +19,27 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 34px;
-  background-color: $white;
+  border-radius: em(34);
+  background-color: vars.$white;
   transition: 0.4s;
   &:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: $RadialGradientBottom;
+    height: em(26);
+    width: em(26);
+    left: em(4);
+    bottom: em(7.5);
+    background-color: vars.$RadialGradientBottom;
     border-radius: 50%;
     transition: 0.4s;
   }
 }
 .switcher.checked {
   .slider {
-    background-color: $RadialGradientBottom;
+    background-color: vars.$RadialGradientBottom;
     &:before {
-      transform: translateX(26px);
-      background-color: $white;
+      transform: translateX(em(32));
+      background-color: vars.$white;
     }
   }
 }

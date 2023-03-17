@@ -4,15 +4,15 @@
 
 .battlefield-section {
   position: relative;
-  width: 1000px;
-  height: 565px;
+  width: em(1000);
+  height: em(565);
   @include flex(center, Center, row);
   display: none;
   @include smallScreen() {
-    width: 350px;
-    gap: 68px;
+    width: em(350);
+    gap: em(68);
   }
-  @media (max-width: 991px) and (min-width: 768px) {
+  @media (max-width: em(991)) and (min-width: em(768)) {
     width: 100%;
   }
   .player,
@@ -23,7 +23,7 @@
     }
     h3 {
       color: white;
-      font-size: 26px;
+      font-size: em(26);
       text-align: center;
       position: absolute;
       top: -70%;
@@ -62,8 +62,8 @@
     }
   }
   .again {
-    padding: 30px;
-    width: 500px;
+    padding: em(30);
+    width: em(500);
     @include flex(center, Center, column);
     @include smallScreen() {
       position: absolute;
@@ -71,25 +71,25 @@
     }
     h1 {
       color: white;
-      font-size: 75px;
-      letter-spacing: 2px;
+      font-size: em(75);
+      letter-spacing: em(2);
       text-align: center;
       @include smallScreen() {
-        font-size: 60px;
+        font-size: em(60);
       }
     }
     button {
-      padding: 20px 85px;
-      border-radius: 4px;
+      padding: em(20) em(85);
+      border-radius: em(4);
       background-color: $white;
-      letter-spacing: 2px;
-      font-size: 20px;
+      letter-spacing: em(2);
+      font-size: em(20);
       font-weight: 700;
       color: $RadialGradientBottom;
       transition: 300ms;
       @include smallScreen() {
-        padding: 20px 40px;
-        font-size: 15px;
+        padding: em(20) em(40);
+        font-size: em(15);
       }
       &:hover {
         color: $RockGradientBottom;

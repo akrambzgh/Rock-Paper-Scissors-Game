@@ -1,26 +1,26 @@
 @use "../abstracts/fun.scss" as *;
 @use "../abstracts/mixin.scss" as *;
-@use "../utils/vars.scss" as *;
+@use "../utils/vars.scss" as vars;
 
 .item {
   position: relative;
-  background-color: $white;
+  background-color: vars.$white;
   @include flex(center, center, row);
-  width: 200px;
-  height: 200px;
+  width: em(200);
+  height: em(200);
   border-radius: 50%;
   cursor: pointer;
   user-select: none;
   @include smallScreen() {
-    width: 130px;
-    height: 130px;
+    width: em(130);
+    height: em(130);
   }
   img {
-    width: 90px;
-    height: 100px;
+    width: em(90);
+    height: em(100);
     @include smallScreen() {
-      width: 80px;
-      height: 90px;
+      width: em(80);
+      height: em(90);
     }
   }
 
@@ -41,40 +41,49 @@
     height: 100%;
     background: transparent;
     border-radius: 50%;
-    box-shadow: 0px -10px lightgrey;
+    box-shadow: em(0) -em(10) lightgrey;
     top: 5%;
   }
   &.paper {
     &::before {
-      background: linear-gradient($PaperGradientTop, $PaperGradientBottom);
-      box-shadow: 11px 4px $ScoreText;
+      background: linear-gradient(
+        vars.$PaperGradientTop,
+        vars.$PaperGradientBottom
+      );
+      box-shadow: em(11) em(4) vars.$ScoreText;
     }
   }
   &.rock {
     &::before {
-      background: linear-gradient($RockGradientTop, $RockGradientBottom);
-      box-shadow: 11px 4px hsl(349deg 97% 38%);
+      background: linear-gradient(
+        vars.$RockGradientTop,
+        vars.$RockGradientBottom
+      );
+      box-shadow: em(11) em(4) hsl(349deg 97% 38%);
     }
   }
   &.scissors {
     &::before {
       background: linear-gradient(
-        $ScissorsGradientTop,
-        $ScissorsGradientBottom
+        vars.$ScissorsGradientTop,
+        vars.$ScissorsGradientBottom
       );
-      box-shadow: 11px 4px hsl(40deg 100% 37%);
+      box-shadow: em(11) em(4) hsl(40deg 100% 37%);
     }
   }
   &.lizard {
     &::before {
-      background: linear-gradient($LizardGradientTop, $LizardGradientBottom);
-      box-shadow: 11px 4px hsl(261, 100%, 40%);
+      background: linear-gradient(
+        vars.$LizardGradientTop,
+        vars.$LizardGradientBottom
+      );
+      box-shadow: em(11) em(4) hsl(261, 100%, 40%);
     }
   }
   &.spock {
     &::before {
-      background: linear-gradient($CyanTop, $CyanBottom);
-      box-shadow: 11px 4px hsl(189, 98%, 40%);
+      background: linear-gradient(vars.$CyanTop, vars.$CyanBottom);
+      box-shadow: em(11) em(4) hsl(189, 98%, 40%);
     }
   }
 }

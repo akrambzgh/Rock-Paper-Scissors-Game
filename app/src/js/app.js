@@ -31,8 +31,10 @@ allOriginalItems.forEach((item) => {
   item.addEventListener("click", () => {
     let itemChoosed = item.classList[2];
     originalChoosingItemSection.style.display = "none";
+
     // Switching to Battlefield
     battleFieldSection.style.display = "flex";
+
     // Random House Choosing
     let itemsArray = ["rock", "paper", "scissors"];
     let randomItem = itemsArray[Math.floor(Math.random() * itemsArray.length)];
@@ -315,6 +317,7 @@ playAgainButton.addEventListener("click", () => {
   playerBox.classList.remove("win");
   houseBox.classList.remove("win");
 });
+
 // Change The Game Type
 let switcher = document.querySelector(".switcher");
 switcher.addEventListener("click", () => {
@@ -326,13 +329,13 @@ switcher.addEventListener("click", () => {
   if (mode.classList[1] == "bonus") {
     originalChoosingItemSection.classList.add("show");
     bonusChoosingItemSection.classList.remove("show");
-    // gameItemsList.innerHTML = `<h2>ROCK</h2><h2>PAPER</h2>
-    // <h2>SCISSORS</h2><h2>LIZARD</h2><h2>SPOCK</h2>`;
+    gameItemsList.innerHTML = `<h2>ROCK</h2><h2>PAPER</h2>
+    <h2>SCISSORS</h2><h2>LIZARD</h2><h2>SPOCK</h2>`;
   } else if (mode.classList[1] == "original") {
     bonusChoosingItemSection.classList.add("show");
     originalChoosingItemSection.classList.remove("show");
-    // gameItemsList.innerHTML = `<h2>ROCK</h2><h2>PAPER</h2>
-    // <h2>SCISSORS</h2>`;
+    gameItemsList.innerHTML = `<h2>ROCK</h2><h2>PAPER</h2>
+    <h2>SCISSORS</h2>`;
   }
 });
 

@@ -69,7 +69,7 @@ body {
   background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 20px;
+  padding-top: 1.25em;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -86,15 +86,15 @@ main {
 
 .choosing-part {
   position: relative;
-  width: 1000px;
-  height: 565px;
+  width: 62.5em;
+  height: 35.3125em;
 }
 @media (max-width: 767px) {
   .choosing-part {
     width: 100%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part {
     width: 85%;
   }
@@ -120,7 +120,7 @@ main {
     left: 5%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors .item.paper {
     left: 3%;
   }
@@ -135,30 +135,30 @@ main {
     right: 7%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors .item.scissors {
     right: 3%;
   }
 }
 .choosing-part.rock-paper-scissors .item.rock {
   top: 58%;
-  left: calc(61% - 210px);
+  left: calc(61% - 13.125em);
 }
 @media (max-width: 767px) {
   .choosing-part.rock-paper-scissors .item.rock {
     top: 60%;
-    left: calc(83% - 210px);
+    left: calc(83% - 13.125em);
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors .item.rock {
     left: 35%;
   }
 }
 .choosing-part.rock-paper-scissors .line {
   position: absolute;
-  width: 200px;
-  height: 15px;
+  width: 12.5em;
+  height: 0.9375em;
   background-color: hsl(237, 49%, 15%);
   z-index: -2;
 }
@@ -182,7 +182,7 @@ main {
     left: 0;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors .line.two {
     left: 50%;
     top: 85%;
@@ -199,7 +199,7 @@ main {
     right: 0;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors .line.three {
     right: 20%;
   }
@@ -225,7 +225,7 @@ main {
     left: 63%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .item.paper {
     left: 3%;
   }
@@ -240,7 +240,7 @@ main {
     right: 36%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .item.scissors {
     right: 3%;
   }
@@ -255,7 +255,7 @@ main {
     left: 10%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .item.lizard {
     right: 3%;
   }
@@ -270,14 +270,14 @@ main {
     left: 4%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .item.spock {
     right: 3%;
   }
 }
 .choosing-part.rock-paper-scissors-lizard-spock .item.rock {
   top: 7%;
-  left: calc(61% - 210px);
+  left: calc(61% - 13.125em);
 }
 @media (max-width: 767px) {
   .choosing-part.rock-paper-scissors-lizard-spock .item.rock {
@@ -285,15 +285,15 @@ main {
     left: 60%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .item.rock {
     left: 35%;
   }
 }
 .choosing-part.rock-paper-scissors-lizard-spock .line {
   position: absolute;
-  width: 200px;
-  height: 15px;
+  width: 12.5em;
+  height: 0.9375em;
   background-color: hsl(237, 49%, 15%);
   z-index: -2;
 }
@@ -321,7 +321,7 @@ main {
     rotate: 46deg;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .line {
     left: 20%;
   }
@@ -337,7 +337,7 @@ main {
     right: 3%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .line.three {
     right: 20%;
   }
@@ -353,7 +353,7 @@ main {
     left: 3%;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .line.four {
     right: 20%;
   }
@@ -368,7 +368,7 @@ main {
     right: 0;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .choosing-part.rock-paper-scissors-lizard-spock .line.five {
     right: 20%;
   }
@@ -376,8 +376,8 @@ main {
 
 .battlefield-section {
   position: relative;
-  width: 1000px;
-  height: 565px;
+  width: 62.5em;
+  height: 35.3125em;
   display: flex;
   justify-content: center;
   align-items: Center;
@@ -386,11 +386,11 @@ main {
 }
 @media (max-width: 767px) {
   .battlefield-section {
-    width: 350px;
-    gap: 68px;
+    width: 21.875em;
+    gap: 4.25em;
   }
 }
-@media (max-width: 991px) and (min-width: 768px) {
+@media (max-width: 61.9375em) and (min-width: 48em) {
   .battlefield-section {
     width: 100%;
   }
@@ -411,7 +411,7 @@ main {
 .battlefield-section .player h3,
 .battlefield-section .house h3 {
   color: white;
-  font-size: 26px;
+  font-size: 1.625em;
   text-align: center;
   position: absolute;
   top: -70%;
@@ -452,8 +452,8 @@ main {
   z-index: -4;
 }
 .battlefield-section .again {
-  padding: 30px;
-  width: 500px;
+  padding: 1.875em;
+  width: 31.25em;
   display: flex;
   justify-content: center;
   align-items: Center;
@@ -467,29 +467,29 @@ main {
 }
 .battlefield-section .again h1 {
   color: white;
-  font-size: 75px;
-  letter-spacing: 2px;
+  font-size: 4.6875em;
+  letter-spacing: 0.125em;
   text-align: center;
 }
 @media (max-width: 767px) {
   .battlefield-section .again h1 {
-    font-size: 60px;
+    font-size: 3.75em;
   }
 }
 .battlefield-section .again button {
-  padding: 20px 85px;
-  border-radius: 4px;
+  padding: 1.25em 5.3125em;
+  border-radius: 0.25em;
   background-color: hsl(0, 0%, 100%);
-  letter-spacing: 2px;
-  font-size: 20px;
+  letter-spacing: 0.125em;
+  font-size: 1.25em;
   font-weight: 700;
   color: hsl(237, 49%, 15%);
   transition: 300ms;
 }
 @media (max-width: 767px) {
   .battlefield-section .again button {
-    padding: 20px 40px;
-    font-size: 15px;
+    padding: 1.25em 2.5em;
+    font-size: 0.9375em;
   }
 }
 .battlefield-section .again button:hover {
@@ -573,26 +573,26 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 200px;
-  height: 200px;
+  width: 12.5em;
+  height: 12.5em;
   border-radius: 50%;
   cursor: pointer;
   user-select: none;
 }
 @media (max-width: 767px) {
   .item {
-    width: 130px;
-    height: 130px;
+    width: 8.125em;
+    height: 8.125em;
   }
 }
 .item img {
-  width: 90px;
-  height: 100px;
+  width: 5.625em;
+  height: 6.25em;
 }
 @media (max-width: 767px) {
   .item img {
-    width: 80px;
-    height: 90px;
+    width: 5em;
+    height: 5.625em;
   }
 }
 .item::before {
@@ -612,28 +612,28 @@ main {
   height: 100%;
   background: transparent;
   border-radius: 50%;
-  box-shadow: 0px -10px lightgrey;
+  box-shadow: 0em -em(10) lightgrey;
   top: 5%;
 }
 .item.paper::before {
   background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  box-shadow: 11px 4px hsl(229, 64%, 46%);
+  box-shadow: 0.6875em 0.25em hsl(229, 64%, 46%);
 }
 .item.rock::before {
   background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  box-shadow: 11px 4px hsl(349, 97%, 38%);
+  box-shadow: 0.6875em 0.25em hsl(349, 97%, 38%);
 }
 .item.scissors::before {
   background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  box-shadow: 11px 4px hsl(40, 100%, 37%);
+  box-shadow: 0.6875em 0.25em hsl(40, 100%, 37%);
 }
 .item.lizard::before {
   background: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
-  box-shadow: 11px 4px hsl(261, 100%, 40%);
+  box-shadow: 0.6875em 0.25em hsl(261, 100%, 40%);
 }
 .item.spock::before {
   background: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
-  box-shadow: 11px 4px hsl(189, 98%, 40%);
+  box-shadow: 0.6875em 0.25em hsl(189, 98%, 40%);
 }
 
 .rules-section {
@@ -694,8 +694,8 @@ main {
 .switcher {
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  width: 3.75em;
+  height: 2.125em;
 }
 .switcher input {
   opacity: 0;
@@ -710,17 +710,17 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 34px;
+  border-radius: 2.125em;
   background-color: hsl(0, 0%, 100%);
   transition: 0.4s;
 }
 .slider:before {
   position: absolute;
   content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  height: 1.625em;
+  width: 1.625em;
+  left: 0.25em;
+  bottom: 0.46875em;
   background-color: hsl(237, 49%, 15%);
   border-radius: 50%;
   transition: 0.4s;
@@ -730,7 +730,7 @@ main {
   background-color: hsl(237, 49%, 15%);
 }
 .switcher.checked .slider:before {
-  transform: translateX(26px);
+  transform: translateX(2em);
   background-color: hsl(0, 0%, 100%);
 }
 
